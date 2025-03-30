@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <div class="homepage_logo">
+    <div class="scroll-watcher"></div>
+    <div class="homepage-logo">
         <nav>
-            <div id="mini_logo_bar">
-                <img src="/images/logo/logo.png" alt="" id="mini_logo_bar">
-                <div id="mini_logo_text">
+            <div id="mini-logo-bar">
+                <img src="/images/logo/logo.png" alt="" id="mini-logo-bar">
+                <div id="mini-logo-text">
                     <h1>NOBLE WHEELS </h1>
                     <p style="text-align:center">LUXORIUS CARS & ELITE</p>
                 </div>
-                <div class="buttons_nav">
+                <div class="buttons-nav">
                     <a href="">HOME</a>
                     <a href="">GALERIA</a>
                     <a href="">ESTOQUE</a>
@@ -30,44 +31,78 @@
     </div>
     <div class="start">
         <div class="homepage">
-            <div class="container" id="cars_logo_right"><img src="/images/logo/left_cars.png" alt="" srcset=""></div>
-            <div class="container" id="main_logo"><img src="/images/logo/logo.png" alt="" srcset=""></div>
-            <div class="container" id="cars_logo_left" id="right"><img src="/images/logo/right_cars.png" alt=""
+            <div class="container" id="cars-logo-right"><img src="/images/logo/left_cars.png" alt="" srcset=""></div>
+            <div class="container" id="main-logo"><img src="/images/logo/logo.png" alt="" srcset=""></div>
+            <div class="container" id="cars-logo-left" id="right"><img src="/images/logo/right_cars.png" alt=""
                     srcset=""></div>
 
         </div>
-        <div class="homepage_text">
+        <div class="homepage-text">
             <h1>NOBLE WHEELS</h1>
             <p>Redefinindo o Luxo, Kilômetro a Kilômetro</p>
         </div>
     </div>
-    <div class="brands_logo_container">
-        <h1 id="gold2">MARCAS EM DESTAQUE</h1>
-        <div class="brands_container">
+    <div class="brands-logo-container">
+        <h1 id="gold2">TRABALHAMOS COM</h1>
+        <div class="brands-container">
             <a href="">
-                <div class="brands_logo"><img src="/images/brands/bmw.png" alt=""></div>
+                <div class="brands-logo"><img src="/images/brands/bmw.png" alt=""></div>
             </a>
             <a href="">
-                <div class="brands_logo"><img src="/images/brands/buggati.png" alt=""></div>
+                <div class="brands-logo"><img src="/images/brands/buggati.png" alt=""></div>
             </a>
             <a href="">
-                <div class="brands_logo"><img src="/images/brands/ferrari.png" alt=""></div>
+                <div class="brands-logo"><img src="/images/brands/ferrari.png" alt=""></div>
             </a>
             <a href="">
-                <div class="brands_logo"><img src="/images/brands/lamborghini.png" alt=""></div>
+                <div class="brands-logo"><img src="/images/brands/lamborghini.png" alt=""></div>
             </a>
             <a href="">
-                <div class="brands_logo"><img src="/images/brands/mclaren.png" alt=""></div>
+                <div class="brands-logo"><img src="/images/brands/mclaren.png" alt=""></div>
             </a>
             <a href="">
-                <div class="brands_logo"><img src="/images/brands/porsche.png" alt=""></div>
+                <div class="brands-logo"><img src="/images/brands/porsche.png" alt=""></div>
             </a>
             <a href="">
-                <div class="brands_logo"><img src="/images/brands/rolls royce.png" alt=""></div>
+                <div class="brands-logo"><img src="/images/brands/rolls royce.png" alt=""></div>
             </a>
         </div>
     </div>
-    <div class="down_page">
+
+    <div class="down-page">
+        <h1 id="promotion">EM PROMOÇÃO</h1>
+
+        <div class="viewer-360-container">
+            <div class="color-text-container">
+                <h1 id="color-text">PRETO METÁLICO INFINITO</h1>
+            </div>
+            <div class="viewer-container" id="viewer">
+                <img class="viewer-img" src="images/cars/lucids/lucid_white/car_0.png" alt="360º viewer promotion"
+                    style="border-radius: 20px;">
+            </div>
+
+            <div class="color-options">
+
+                <div id="color-white" class="color-option" data-color="black" tabindex="0"
+                    onclick="colorChanger('white')">
+                </div>
+                <div id="color-black" class="color-option" data-color="white" tabindex="0"
+                    onclick="colorChanger('black')">
+
+                </div>
+                <div id="color-wine" class="color-option" data-color="wine" tabindex="0" onclick="colorChanger('wine')">
+                </div>
+            </div>
+            <div class="info-container">
+                
+                <div class="viewer-info">
+                    <div class="question-mark">
+                        ?
+                        <div class="text-show">Tente mover a imagem acima!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h1 id="news">NOVAS ENCOMENDAS</h1>
         <div class="cars">
             <div class="car"><img src="/images/cars/911.jpg" alt="">
@@ -106,12 +141,12 @@
             </div>
         </div>
         <div class="cars">
-            
+
             <div class="car"><img src="/images/cars/mercedes.jpg" alt="">
                 <h1>MERCEDES-AMG<font style="font-weight: 300;"> G63</font>
-    
+
                 </h1>
-                <p id="protect" class="w_protect" ">COM BLINDAGEM</p>
+                <p id="protect" class="w-protect" ">COM BLINDAGEM</p>
     
                 <p id="price">R$3.800.000,00</p>
                 <button id="buy">VER MAIS</button>
@@ -120,7 +155,7 @@
                 <h1>LAND ROVER <font style="font-weight: 300;">P530 SV</font>
 
                 </h1>
-                <p id="protect" class="w_protect" ">COM BLINDAGEM</p>
+                <p id="protect" class="w-protect" ">COM BLINDAGEM</p>
 
                 <p id="price">R$1.550.000,00</p>
                 <button id="buy">VER MAIS</button>
@@ -129,12 +164,12 @@
                 <h1>BMW M8<font style="font-weight: 300;"> GRAN COUPÉ</font>
 
                 </h1>
-                <p id="protect" class="w_protect" ">COM BLINDAGEM</p>
+                <p id="protect" class="w-protect" ">COM BLINDAGEM</p>
 
                 <p id="price">R$850.000,00</p>
                 <button id="buy">VER MAIS</button>
             </div>
-            
+
             <div class="car"><img src="/images/cars/porsche 718.jpg" alt="">
                 <h1>PORSCHE 718<font style="font-weight: 300;"> BOXSTER </font>
 
@@ -145,9 +180,12 @@
                 <button id="buy">VER MAIS</button>
             </div>
         </div>
-          25 ANOS
     </div>
-    <script src="app.js"></script>
+    <div class="box"></div>
+    <script src="script_scroll_based_animation.js"></script>
+    <script src="script_promotion.js"></script>
+    <script src="script_car_carousel.js"></script>
+    <script src="script_options_color.js"></script>
 </body>
 
 </html>

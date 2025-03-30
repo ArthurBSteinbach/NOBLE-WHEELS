@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Animation (HTML Only)</title>
+  <style>
+    body {
+      height: 200vh; /* Força scroll para teste */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      margin: 100vh auto; /* Posiciona a box após uma tela de scroll */
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: opacity 0.6s, transform 0.6s;
+    }
+
+    .box.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const box = document.querySelector(".box");
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add("show");
+              } else {
+                  entry.target.classList.remove("show");
+              }
+          });
+      }, { threshold: 0.9 }); // Ativa quando 10% da box estiver visível
+
+      observer.observe(box);
+    });
+  </script>
+</body>
+</html>

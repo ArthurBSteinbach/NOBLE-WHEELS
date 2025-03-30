@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minhas bolas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .bola {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #ff6b6b;
+            border-radius: 50%; /* Garante que sempre será um círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            overflow: hidden; /* Esconde o texto que ultrapassar */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .bola:hover {
+            border-radius: 0px;
+            transform: scale(1.1); /* Aumenta um pouco, mas mantém o círculo */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .texto-inicial {
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .bola:hover .texto-inicial {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        
+        .texto-escondido {
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.5s ease;
+            padding: 20px;
+            width: 80%; /* Limita a largura para não esticar demais */
+        }
+        
+        .bola:hover .texto-escondido {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bola">
+        <div class="texto-inicial">Toque aqui</div>
+        <div class="texto-escondido">
+            minha bola direita
+        </div>
+    </div>
+    <div class="bola">
+        <div class="texto-inicial">Toque aqui</div>
+        <div class="texto-escondido">
+            minha bola esquerda?
+        </div>
+    </div>
+</body>
+</html>
