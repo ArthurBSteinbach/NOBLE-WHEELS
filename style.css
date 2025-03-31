@@ -17,6 +17,7 @@ html {
 
 body,
 html {
+    overflow-x: hidden;
     width: 100%;
     max-width: 100%;
 }
@@ -374,6 +375,44 @@ html {
     }
     100%{
         letter-spacing: 0px;
+    }
+}
+#cronometer{
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: inter-regular;
+    font-size: 50px;
+    color: #fff;
+    border-radius: 20px;
+    background:
+        linear-gradient(#141414, #141414) padding-box,
+        linear-gradient(#E1C584 20%, #C3955A, #38240f) border-box;
+    border: 5px solid transparent;
+    padding: 20px;
+    
+}
+#time-left{
+    font-weight: lighter;
+    animation: blinking-time 1s infinite;
+}
+#delay{
+    opacity: 0;
+}
+#delay.show{
+    opacity: 1;
+
+}
+@keyframes blinking-time {
+    0%{
+        color: #fff;
+    }
+    50%{
+        color: red;
+        filter: drop-shadow(0px 0px 20px rgb(255, 63, 63));
+    }
+    0%{
+        color: #fff;
     }
 }
 .cars {
