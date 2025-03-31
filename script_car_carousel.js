@@ -1,7 +1,7 @@
 // Configurações
 const totalImages = 36; // Total de imagens para 360°
 let currentAngle = 0;
-let currentColor = 'white';
+let currentColor = 'black';
 let isDragging = false;
 let startX = 0;
 
@@ -12,7 +12,7 @@ const colorOptions = document.querySelectorAll('.color-option');
 
 // Pré-carrega imagens para todas as cores
 function preloadImages() {
-    const colors = ['white', 'black', 'wine'];
+    const colors = ['black', 'white', 'wine'];
     colors.forEach(color => {
         for (let i = 0; i < totalImages; i++) {
             new Image().src = `images/cars/lucids/lucid_${color}/car_${i}.png`;
