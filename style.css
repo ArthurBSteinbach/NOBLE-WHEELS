@@ -51,6 +51,7 @@ html {
 .homepage-logo nav {
     height: 100px;
     margin: 10px;
+    filter: drop-shadow(0px 2px 2px #281A0B);
     background-image: linear-gradient(to right, #2D2D2D 50%, #1f1f1f);
     border-bottom: 2px solid;
     border-image-slice: 1;
@@ -129,10 +130,10 @@ html {
     position: relative;
     margin: 20px;
     font-weight: 400;
-    text-decoration-thickness: 1px;
     color: #FFFFFF;
     font-family: inter-regular;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .buttons-nav a:hover {
@@ -140,72 +141,129 @@ html {
     color: red;
 }
 
-
+.text-container{
+    margin-top: 250px;
+    z-index: 100;
+}
 .homepage {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-
 .homepage-text {
     display: grid;
     justify-items: center;
     position: absolute;
-    left: 50%;
-    top: 80%;
-    transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
+
 }
 
 .homepage-text h1 {
     font-family: inter-regular;
-    font-size: 50px;
     width: 110%;
     font-style: italic;
     font-weight: 1000;
+    font-size: 60px;
     margin: 0;
     padding: 0;
-    background: -webkit-linear-gradient(#FFF4AE 20%, #E1C584, #C3955A, #382510, #FFF4AE);
+    background: -webkit-linear-gradient(10deg,#FFF4AE 10%, #E1C584, #C3955A, #382510, #FFF4AE);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+    animation: big-to-small 1s ease-out;
+    filter: drop-shadow(0px 2px 5px black);
 
+}
+@keyframes big-to-small {
+    0%{
+        font-size: 100px;
+    }
+    100%{
+        font-size: 60px;
+    }
+}
 .homepage-text p {
+    text-shadow: 0px 10px 5px black;
     font-family: inter-regular;
-    font-size: 30px;
+    font-size: 40px;
     font-style: italic;
     font-weight: lighter;
     margin: 0;
     padding: 0;
     color: #FFFFFF;
+    transform: translateY(0px);
+    animation: fade-in-bottom 1.5s linear;
+    
+}
+@keyframes fade-in-bottom {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
 }
 
 #cars-logo-left {
     position: relative;
     z-index: 0;
-    margin: 200px;
+    margin: 180px;
     margin-right: auto;
     top: 10px;
+    transform: translateX(0px);
+    opacity: 0;
+    animation: left-fade 1s 1.2s forwards;
 }
+@keyframes left-fade {
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
 
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
 #cars-logo-right {
     position: relative;
     z-index: 0;
-    margin: 200px;
+    margin: 180px;
     margin-left: auto;
     top: 10px;
-}
+    opacity: 0;
+    transform: translateX(0px);
+    animation: right-fade 1s 1.2s forwards;
+    
 
+}
+@keyframes right-fade {
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+}
 .homepage .container img {
-    width: 690px;
+    width: 750px;
     height: auto;
+    
 }
 
 #main-logo img {
-    filter: drop-shadow(0px 10px 5px #2D2D2D);
-    animation: pulse 500ms ease-in;
+    z-index: 999;
+    filter: drop-shadow(0px 10px 10px #281A0B);
+    animation: pulse 500ms ease-in, shadow-pulsing 5s infinite;
     height: auto;
     width: 550px;
     position: absolute;
@@ -213,7 +271,17 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+@keyframes shadow-pulsing {
+    0%{
+        filter: drop-shadow(0px 10px 10px #281A0B);
+    }
+    50%{
+        filter: drop-shadow(0px 0px 0px #281A0B);
+    }
+    100%{
+        filter: drop-shadow(0px 10px 10px #281A0B);
+    }
+}
 @keyframes pulse {
     0% {
         width: 1000px;
@@ -244,8 +312,8 @@ html {
     font-family: inter-regular;
 }
 .brands-container {
+    margin-bottom: 100px;
     padding: 15px;
-    background-color: #1f1f1f;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -253,6 +321,8 @@ html {
 }
 
 .brands-logo {
+    transform: translateY(50px);
+    opacity: 0;
     border: 2px solid #C3955A;
     border-radius: 10px;
     width: 100px;
@@ -262,14 +332,16 @@ html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transition: 500ms;
 }
-
+.brands-logo.show{
+    transition: all 1s;
+    opacity: 1;
+    transform: translateY(0px);
+}
 .brands-logo img {
     width: 100px;
     height: 100px;
     filter: grayscale(100%);
-    transition: 500ms;
 }
 
 .brands-logo:hover {
