@@ -1,10 +1,10 @@
 function iniciarCronometro() {
     const agora = new Date().getTime();
-    const tempoFinal = agora + (2 * 24 * 60 * 60 * 1000); // 2 days from now
+    const tempoFinal = agora + (2 * 24 * 60 * 60 * 1000); // 2 daqui em diante
     const cronometroElement = document.getElementById("cronometer");
     const timeLeftElement = document.getElementById("time-left");
     
-    function atualizarCronometro() {
+    function atualizarCronometro() { // função para atualizar o cronometro
         const agoraAtual = new Date().getTime();
         const diferenca = tempoFinal - agoraAtual;
         
@@ -23,8 +23,8 @@ function iniciarCronometro() {
     }
     
     const intervalo = setInterval(atualizarCronometro, 1000);
-    atualizarCronometro(); // Initial call
+    atualizarCronometro(); // chamando a função inicial
 }
 
-// Start the countdown when the page loads
+// começa quando a página é carregada
 window.addEventListener('DOMContentLoaded', iniciarCronometro);
